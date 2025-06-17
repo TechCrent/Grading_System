@@ -13,36 +13,33 @@
 #include<iostream>
 
 int main(){
-    //VAriables
+    //Variables
     float score;
 
     std::cout << "Enter your score: " << std::endl;
     std::cin >> score;
 
     // Exceptions Before Running
-    if (score < 0 || score == 100){
+    if (score < 0 || score > 100){
         std::cout << "Invalid score. Please enter a value between 0 and 100." << std::endl;
-    }else if (score < 49){
+    }else if (score < 50){
         std::cout << "Grade F";
 
-    }else if (score <= 50){
+    }else if (score < 60){
         std::cout << "Grade E";
 
-    }else if (score <= 60){
+    }else if (score < 70){
         std::cout << "Grade D";
 
-    }else if (score <= 70){
+    }else if (score < 80){
         std::cout << "Grade C";
 
-    }else if (score <= 80){
+    }else if (score < 90){
         std::cout << "Grade B";
 
-    }else if (score <= 90){
+    }else
+    {
         std::cout << "Grade A";
-
-    }else if (score > 100){
-        std::cout << "Error";
-
     }
 
     return 0;
